@@ -21,7 +21,7 @@ const Home = () => {
     const date = new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(now);
   
   return (
-    <section className="h-[300px] w-full rounded-[20px] bg-black-5 bg-cover" 
+    <section className="h-[300px] w-full rounded-[20px] bg-dark-5 bg-cover" 
     style={{ backgroundImage: 'url(bg-image/goku2.png)' }}>
       <div className="h-[315px] w-full rounded-[20px] bg-hero bg-cover">
         <div className="flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11 ">

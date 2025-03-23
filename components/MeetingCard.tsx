@@ -9,6 +9,7 @@ import { useToast } from "./ui/use-toast";
 interface MeetingCardProps {
   title: string;
   date: string;
+  icon:string;
   isPreviousMeeting?: boolean;
   buttonIcon1?: string;
   buttonText?: string;
@@ -19,6 +20,7 @@ interface MeetingCardProps {
 const MeetingCard = ({
   title,
   date,
+  icon,
   isPreviousMeeting,
   buttonIcon1,
   handleClick,
@@ -32,7 +34,7 @@ const MeetingCard = ({
                   'bg-nav-focus border-r-4 border-[#9f06e6]': isActive,
                 }">
       <div className=" flex flex-row align-center ">
-        <Image src='icons/clock.svg' alt="upcoming" width={35} height={35} text-white-1/> <p className="mx-5 py-5 text-3xl">Previous Calls</p>
+        <Image src={icon} alt="upcoming" width={35} height={35} text-white/> <p className="mx-5 py-5 text-3xl">Previous Calls</p>
       </div>
       <article className="flex flex-col gap-5">
         

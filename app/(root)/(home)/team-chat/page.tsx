@@ -72,7 +72,7 @@ export default function TeamChat() {
             className="flex-grow mr-2 bg-gray-100 text-gray-900 placeholder-gray-500"
           />
           <Button type="submit" size="icon" className="bg-orange-1 hover:bg-orange-600">
-            <Send className="h-4 w-4 text-white" />
+            <Send className="h-4 w-4 text-white-1" />
             <span className="sr-only">Send</span>
           </Button>
         </form>
