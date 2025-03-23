@@ -60,7 +60,7 @@ const MeetingSetup = ({
     );
 
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center gap-3 text-white">
+    <div className="flex h-screen w-full flex-col items-center justify-center gap-3 text-white-1">
       <h1 className="text-center text-2xl font-bold">Setup</h1>
       <VideoPreview />
       <div className="flex h-16 items-center justify-center gap-3">
@@ -75,13 +75,11 @@ const MeetingSetup = ({
         <DeviceSettings />
       </div>
       <Button
-        className="rounded-md bg-green-500 px-4 py-2.5"
+        className="rounded-md bg-blue-1 px-4 py-2.5"
         onClick={() => {
           call.join();
-
           setIsSetupComplete(true);
-        }}
-      >
+        }}>
         Join meeting
       </Button>
     </div>

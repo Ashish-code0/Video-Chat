@@ -19,14 +19,23 @@ const config = {
     },
     extend: {
       colors: {
+        white: {
+          1: "#FFFFFF",
+          2: "rgba(255, 255, 255, 0.72)",
+          3: "rgba(255, 255, 255, 0.4)",
+          4: "rgba(255, 255, 255, 0.64)",
+          5: "rgba(255, 255, 255, 0.80)",
+        },
         dark: {
-          1: '#1C1F2E',
-          2: '#161925',
-          3: '#252A41',
-          4: '#1E2757',
+          1: "#15171C",
+          2: "#222429",
+          3: "#101114",
+          4: "#252525",
+          5: "#2E3036",
+          6: "#24272C",
         },
         blue: {
-          1: '#0E78F9',
+          1: '#fc5403',
         },
         sky: {
           1: '#C9DDFF',
@@ -34,7 +43,7 @@ const config = {
           3: '#F5FCFF',
         },
         orange: {
-          1: '#FF742E',
+          1: '#fc5403',
         },
         purple: {
           1: '#830EF9',
@@ -42,6 +51,9 @@ const config = {
         yellow: {
           1: '#F9A90E',
         },
+        gray: {
+          1: "#71788B",
+        }
       },
       keyframes: {
         'accordion-down': {
@@ -58,7 +70,8 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       backgroundImage: {
-        hero: "url('/images/hero-background.png')",
+        "nav-focus":
+          "linear-gradient(270deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%)",
       },
     },
   },

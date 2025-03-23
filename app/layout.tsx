@@ -11,11 +11,8 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'video-chat',
+  title: 'ChatBox',
   description: 'Video calling App',
-  icons: {
-    icon: '/icons/logo.svg',
-  },
 };
 
 export default function RootLayout({
@@ -27,7 +24,7 @@ export default function RootLayout({
         appearance={{
           layout: {
             socialButtonsVariant: 'iconButton',
-            logoImageUrl: '/icons/yoom-logo.svg',
+            logoImageUrl: './video.svg',
           },
           variables: {
             colorText: '#fff',
@@ -38,7 +35,7 @@ export default function RootLayout({
           },
         }}
       >
-        <body className={`${inter.className} bg-dark-2`}>
+        <body className={`${inter.className} bg-dark-3 text-white-1`}>
           <Toaster />
           {children}
         </body>

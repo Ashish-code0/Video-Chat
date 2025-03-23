@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useUser } from "@clerk/nextjs";
 import { useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useRouter } from "next/navigation";
@@ -76,6 +76,7 @@ const PersonalRoom = () => {
             });
           }}
         >
+          <Image src="/icons/copy.svg" alt="feature" width={20} height={20}/> &nbsp;
           Copy Invitation
         </Button>
       </div>

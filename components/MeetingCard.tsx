@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { avatarImages } from "@/constants";
@@ -10,7 +9,6 @@ import { useToast } from "./ui/use-toast";
 interface MeetingCardProps {
   title: string;
   date: string;
-  icon: string;
   isPreviousMeeting?: boolean;
   buttonIcon1?: string;
   buttonText?: string;
@@ -19,7 +17,6 @@ interface MeetingCardProps {
 }
 
 const MeetingCard = ({
-  icon,
   title,
   date,
   isPreviousMeeting,
@@ -31,9 +28,14 @@ const MeetingCard = ({
   const { toast } = useToast();
 
   return (
-    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[568px]">
+    <div className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-2 px-5 py-8 xl:max-w-[568px] {
+                  'bg-nav-focus border-r-4 border-[#9f06e6]': isActive,
+                }">
+      <div className=" flex flex-row align-center ">
+        <Image src='icons/clock.svg' alt="upcoming" width={35} height={35} text-white-1/> <p className="mx-5 py-5 text-3xl">Previous Calls</p>
+      </div>
       <article className="flex flex-col gap-5">
-        <Image src={icon} alt="upcoming" width={28} height={28} />
+        
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl font-bold">{title}</h1>
@@ -86,7 +88,7 @@ const MeetingCard = ({
           </div>
         )}
       </article>
-    </section>
+    </div>
   );
 };
 
